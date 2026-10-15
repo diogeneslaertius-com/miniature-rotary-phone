@@ -1,0 +1,43 @@
+{
+  "_comment": "Только ПВЗ (пункты выдачи), не постаматы — у компании нет автоматизированных locker'ов. Название файла/эндпоинта (postamats) сохранено ради скорости правок, по смыслу это ПВЗ.",
+
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "demo-001",
+        "provider": "demo",
+        "name": "ПВЗ (пример) — пр. Абая",
+        "type": "pvz",
+        "free_slots": 12,
+        "total_slots": 30
+      },
+      "geometry": { "type": "Point", "coordinates": [76.9286, 43.2380] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "demo-002",
+        "provider": "demo",
+        "name": "ПВЗ (пример) — ул. Толе би",
+        "type": "pvz",
+        "free_slots": 0,
+        "total_slots": 24
+      },
+      "geometry": { "type": "Point", "coordinates": [76.9200, 43.2450] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "demo-003",
+        "provider": "demo",
+        "name": "ПВЗ (пример) — мкр Самал",
+        "type": "pvz",
+        "free_slots": 8,
+        "total_slots": 20
+      },
+      "geometry": { "type": "Point", "coordinates": [76.9450, 43.2200] }
+    }
+  ]
+}

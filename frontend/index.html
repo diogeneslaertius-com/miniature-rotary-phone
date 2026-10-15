@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Jana Navigator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand__mark">JN</span>
+      <span class="brand__name">Jana Navigator</span>
+    </div>
+    <form id="search-form" class="search">
+      <div class="search__field">
+        <input
+          id="search-input"
+          class="search__input"
+          type="text"
+          placeholder="Куда доставляем?"
+          autocomplete="off"
+        />
+        <div id="siri-wave-container" class="search__wave"></div>
+      </div>
+      <button id="mic-btn" type="button" class="search__mic" aria-label="Голосовой ввод">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="9" y="3" width="6" height="11" rx="3" />
+          <path d="M5 11a7 7 0 0 0 14 0" />
+          <path d="M12 18v3" />
+        </svg>
+      </button>
+    </form>
+  </header>
+
+  <div id="voice-status" class="voice-status" hidden></div>
+
+  <div id="layer-toggle" class="layer-toggle">
+    <button class="layer-toggle__btn is-active" data-layer="pvz" type="button">ПВЗ</button>
+    <button class="layer-toggle__btn" id="orders-btn" type="button">Мои задачи</button>
+  </div>
+
+  <section id="sheet" class="sheet" hidden>
+    <div class="sheet__handle"></div>
+    <div id="sheet-content" class="sheet__content"></div>
+  </section>
+
+  <script src="https://mapgl.2gis.com/api/js/v1"></script>
+  <script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
